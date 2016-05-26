@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54013E8F1CCD4EAE00B8E2E9 /* TogglAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54013E8E1CCD4EAE00B8E2E9 /* TogglAPI.swift */; };
+		54013E911CCD4EE500B8E2E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54013E901CCD4EE500B8E2E9 /* Extensions.swift */; };
+		54096E3B1CF750560010E727 /* OnlyIntegerValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54096E3A1CF750560010E727 /* OnlyIntegerValueFormatter.swift */; };
+		540E60771CF0FBF1007BEA4D /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E60761CF0FBF1007BEA4D /* StatusMenuController.swift */; };
+		540E60791CF10850007BEA4D /* KeyboardEnabledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E60781CF10850007BEA4D /* KeyboardEnabledTextField.swift */; };
+		540E607B1CF10CC9007BEA4D /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E607A1CF10CC9007BEA4D /* UserSettings.swift */; };
+		540E607D1CF10D9B007BEA4D /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E607C1CF10D9B007BEA4D /* SettingsManager.swift */; };
+		543C6FE81CF785B60065D6FA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 543C6FE71CF785B60065D6FA /* Alamofire.framework */; };
+		543C6FE91CF785B60065D6FA /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 543C6FE71CF785B60065D6FA /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		543C6FEC1CF785E10065D6FA /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 543C6FEB1CF785E10065D6FA /* RxCocoa.framework */; };
+		543C6FED1CF785E10065D6FA /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 543C6FEB1CF785E10065D6FA /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		543C6FF01CF785FE0065D6FA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 543C6FEE1CF785FE0065D6FA /* RxSwift.framework */; };
+		543C6FF11CF785FE0065D6FA /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 543C6FEE1CF785FE0065D6FA /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		543C6FF21CF785FE0065D6FA /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 543C6FEF1CF785FE0065D6FA /* SwiftyJSON.framework */; };
+		543C6FF31CF785FE0065D6FA /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 543C6FEF1CF785FE0065D6FA /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		547D567C1CC43728008D5F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547D567B1CC43728008D5F50 /* AppDelegate.swift */; };
+		547D567E1CC43728008D5F50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547D567D1CC43728008D5F50 /* Assets.xcassets */; };
+		547D56811CC43728008D5F50 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547D567F1CC43728008D5F50 /* MainMenu.xib */; };
+		547D56891CC43E32008D5F50 /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547D56881CC43E32008D5F50 /* SettingsWindowController.swift */; };
+		547D568B1CC43E6C008D5F50 /* SettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547D568A1CC43E6C008D5F50 /* SettingsWindowController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		547D568F1CC449C5008D5F50 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				543C6FF31CF785FE0065D6FA /* SwiftyJSON.framework in Embed Frameworks */,
+				543C6FED1CF785E10065D6FA /* RxCocoa.framework in Embed Frameworks */,
+				543C6FE91CF785B60065D6FA /* Alamofire.framework in Embed Frameworks */,
+				543C6FF11CF785FE0065D6FA /* RxSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		54013E8E1CCD4EAE00B8E2E9 /* TogglAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TogglAPI.swift; sourceTree = "<group>"; };
+		54013E901CCD4EE500B8E2E9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		54096E3A1CF750560010E727 /* OnlyIntegerValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlyIntegerValueFormatter.swift; sourceTree = "<group>"; };
+		540E60761CF0FBF1007BEA4D /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		540E60781CF10850007BEA4D /* KeyboardEnabledTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardEnabledTextField.swift; sourceTree = "<group>"; };
+		540E607A1CF10CC9007BEA4D /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		540E607C1CF10D9B007BEA4D /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		543C6FE71CF785B60065D6FA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		543C6FEB1CF785E10065D6FA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
+		543C6FEE1CF785FE0065D6FA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		543C6FEF1CF785FE0065D6FA /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/Mac/SwiftyJSON.framework; sourceTree = "<group>"; };
+		547D56781CC43728008D5F50 /* Togglord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Togglord.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		547D567B1CC43728008D5F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		547D567D1CC43728008D5F50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		547D56801CC43728008D5F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		547D56821CC43728008D5F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		547D56881CC43E32008D5F50 /* SettingsWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
+		547D568A1CC43E6C008D5F50 /* SettingsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsWindowController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		547D56751CC43728008D5F50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				543C6FF21CF785FE0065D6FA /* SwiftyJSON.framework in Frameworks */,
+				543C6FEC1CF785E10065D6FA /* RxCocoa.framework in Frameworks */,
+				543C6FE81CF785B60065D6FA /* Alamofire.framework in Frameworks */,
+				543C6FF01CF785FE0065D6FA /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		543C6FEA1CF785B90065D6FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				543C6FEE1CF785FE0065D6FA /* RxSwift.framework */,
+				543C6FEF1CF785FE0065D6FA /* SwiftyJSON.framework */,
+				543C6FE71CF785B60065D6FA /* Alamofire.framework */,
+				543C6FEB1CF785E10065D6FA /* RxCocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		547D566F1CC43728008D5F50 = {
+			isa = PBXGroup;
+			children = (
+				543C6FEA1CF785B90065D6FA /* Frameworks */,
+				547D567A1CC43728008D5F50 /* togglord */,
+				547D56791CC43728008D5F50 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		547D56791CC43728008D5F50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				547D56781CC43728008D5F50 /* Togglord.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		547D567A1CC43728008D5F50 /* togglord */ = {
+			isa = PBXGroup;
+			children = (
+				547D567B1CC43728008D5F50 /* AppDelegate.swift */,
+				547D567D1CC43728008D5F50 /* Assets.xcassets */,
+				547D567F1CC43728008D5F50 /* MainMenu.xib */,
+				547D56821CC43728008D5F50 /* Info.plist */,
+				547D56881CC43E32008D5F50 /* SettingsWindowController.swift */,
+				547D568A1CC43E6C008D5F50 /* SettingsWindowController.xib */,
+				540E60761CF0FBF1007BEA4D /* StatusMenuController.swift */,
+				54013E8E1CCD4EAE00B8E2E9 /* TogglAPI.swift */,
+				54013E901CCD4EE500B8E2E9 /* Extensions.swift */,
+				540E60781CF10850007BEA4D /* KeyboardEnabledTextField.swift */,
+				540E607A1CF10CC9007BEA4D /* UserSettings.swift */,
+				540E607C1CF10D9B007BEA4D /* SettingsManager.swift */,
+				54096E3A1CF750560010E727 /* OnlyIntegerValueFormatter.swift */,
+			);
+			path = togglord;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		547D56771CC43728008D5F50 /* togglord */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 547D56851CC43728008D5F50 /* Build configuration list for PBXNativeTarget "togglord" */;
+			buildPhases = (
+				547D56741CC43728008D5F50 /* Sources */,
+				547D56751CC43728008D5F50 /* Frameworks */,
+				547D56761CC43728008D5F50 /* Resources */,
+				547D568F1CC449C5008D5F50 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = togglord;
+			productName = togglord;
+			productReference = 547D56781CC43728008D5F50 /* Togglord.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		547D56701CC43728008D5F50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Happy Team";
+				TargetAttributes = {
+					547D56771CC43728008D5F50 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 547D56731CC43728008D5F50 /* Build configuration list for PBXProject "Togglord" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 547D566F1CC43728008D5F50;
+			productRefGroup = 547D56791CC43728008D5F50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				547D56771CC43728008D5F50 /* togglord */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		547D56761CC43728008D5F50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547D567E1CC43728008D5F50 /* Assets.xcassets in Resources */,
+				547D56811CC43728008D5F50 /* MainMenu.xib in Resources */,
+				547D568B1CC43E6C008D5F50 /* SettingsWindowController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		547D56741CC43728008D5F50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54096E3B1CF750560010E727 /* OnlyIntegerValueFormatter.swift in Sources */,
+				54013E8F1CCD4EAE00B8E2E9 /* TogglAPI.swift in Sources */,
+				547D56891CC43E32008D5F50 /* SettingsWindowController.swift in Sources */,
+				540E60771CF0FBF1007BEA4D /* StatusMenuController.swift in Sources */,
+				547D567C1CC43728008D5F50 /* AppDelegate.swift in Sources */,
+				540E607D1CF10D9B007BEA4D /* SettingsManager.swift in Sources */,
+				540E607B1CF10CC9007BEA4D /* UserSettings.swift in Sources */,
+				540E60791CF10850007BEA4D /* KeyboardEnabledTextField.swift in Sources */,
+				54013E911CCD4EE500B8E2E9 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		547D567F1CC43728008D5F50 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				547D56801CC43728008D5F50 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		547D56831CC43728008D5F50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		547D56841CC43728008D5F50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		547D56861CC43728008D5F50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = togglord/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.happyteam.togglord;
+				PRODUCT_NAME = Togglord;
+			};
+			name = Debug;
+		};
+		547D56871CC43728008D5F50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = togglord/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.happyteam.togglord;
+				PRODUCT_NAME = Togglord;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		547D56731CC43728008D5F50 /* Build configuration list for PBXProject "Togglord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				547D56831CC43728008D5F50 /* Debug */,
+				547D56841CC43728008D5F50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		547D56851CC43728008D5F50 /* Build configuration list for PBXNativeTarget "togglord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				547D56861CC43728008D5F50 /* Debug */,
+				547D56871CC43728008D5F50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 547D56701CC43728008D5F50 /* Project object */;
+}
