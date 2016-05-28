@@ -68,7 +68,7 @@ class SettingsWindowController : NSWindowController, NSWindowDelegate {
         return "SettingsWindowController"
     }
     
-    dynamic var requestInterval: Int = MinimumRequestInterval
+    dynamic var requestInterval: Int = 300
     
     dynamic var projects: [ProjectViewModel] = []
     
