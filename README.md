@@ -3,6 +3,11 @@ Simple OS X Menu Bar utility which displays weekly toggl summary for a selected 
 
 ![screenshot](sshot.png)
 
+This project uses the following libraries:
+* [Alamofire](https://github.com/Alamofire/Alamofire) - _Elegant HTTP Networking in Swift_
+* [RxSwift](https://github.com/ReactiveX/RxSwift) - _Reactive Programming in Swift_
+* [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) - _The better way to deal with JSON data in Swift_
+
 ## Usage
 
 After first run, open `Proferences` from the context menu, enter your toggl API token (from [toggl web site -> my profile](https://www.toggl.com/app/profile)) and select a project for which time summary will be displayed.
