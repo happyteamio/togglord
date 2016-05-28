@@ -1,5 +1,5 @@
 # togglord
-Simple OS X Menu Bar utility which displays weekly toggl summary for a selected project.
+Simple OS X Menu Bar utility which displays weekly [toggl](https://toggl.com) summary for a selected project.
 
 ![screenshot](sshot.png)
 
