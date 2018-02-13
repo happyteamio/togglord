@@ -1,129 +1,138 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SettingsWindowController" customModule="togglord" customModuleProvider="target">
             <connections>
-                <outlet property="apiToken" destination="nof-9S-7Ri" id="Qz8-8u-LQb"/>
-                <outlet property="formatter" destination="kZb-bV-UV5" id="RdA-Ex-h9n"/>
-                <outlet property="projectsList" destination="Ezb-Z8-CDA" id="ehq-QB-dT6"/>
-                <outlet property="requestStepper" destination="m5s-dq-cfE" id="rex-jB-0RQ"/>
-                <outlet property="rounding" destination="SAh-9J-YPR" id="l0e-lR-ngw"/>
-                <outlet property="window" destination="QvC-M9-y7g" id="4sG-Hq-lwd"/>
+                <outlet property="apiToken" destination="uf2-Pg-haa" id="faR-uZ-k9n"/>
+                <outlet property="formatter" destination="mdG-rp-JMV" id="jSF-yD-v8y"/>
+                <outlet property="projectsList" destination="fhV-5o-dXB" id="33i-OC-5U0"/>
+                <outlet property="requestStepper" destination="qGI-Pg-1T1" id="AnD-Na-PbH"/>
+                <outlet property="rounding" destination="Itw-By-SCY" id="8w8-wM-l4W"/>
+                <outlet property="window" destination="BpS-3o-o5k" id="aOF-QS-BtM"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="togglord" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="togglord" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" visibleAtLaunch="NO" animationBehavior="default" id="BpS-3o-o5k">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <rect key="contentRect" x="196" y="240" width="415" height="145"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
-            <view key="contentView" id="EiT-Mj-1SZ">
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <view key="contentView" id="Z6k-7X-QOB">
                 <rect key="frame" x="0.0" y="0.0" width="415" height="145"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M0B-Va-ytT">
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hlf-Jo-VR6">
                         <rect key="frame" x="18" y="108" width="92" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="API Token:" id="2z0-TP-3j8">
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="API Token:" id="f3d-Kl-KHi">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5s-NQ-FUh">
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAr-Ae-BnG">
                         <rect key="frame" x="18" y="77" width="92" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Project:" id="iht-EF-RNN">
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Project:" id="ltG-PC-7ch">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M66-ab-1YI">
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8NY-jJ-qCS">
                         <rect key="frame" x="18" y="50" width="136" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Request interval:" id="eof-Gy-jch">
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Request interval:" id="fw8-wa-wPw">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nMZ-6c-uXX">
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lfY-qS-iqA">
                         <rect key="frame" x="260" y="50" width="77" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(seconds)" id="VXK-iY-C70">
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(seconds)" id="QtW-xN-toe">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nof-9S-7Ri" customClass="KeyboardEnabledTextField" customModule="togglord" customModuleProvider="target">
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uf2-Pg-haa" customClass="KeyboardEnabledTextField" customModule="Togglord" customModuleProvider="target">
                         <rect key="frame" x="134" y="105" width="261" height="22"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="qOu-Gi-x5D">
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="tbH-L0-cYC">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ezb-Z8-CDA">
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhV-5o-dXB">
                         <rect key="frame" x="132" y="72" width="266" height="26"/>
-                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="Hbj-Ta-HpH">
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="Zgb-zn-qy2">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
-                            <menu key="menu" id="lFj-44-yfe">
+                            <menu key="menu" id="Gp6-UB-PKR">
                                 <items>
-                                    <menuItem id="HAI-3L-dQp"/>
-                                    <menuItem title="Item 2" id="GQD-2t-BOF"/>
-                                    <menuItem title="Item 3" id="soL-le-sPc"/>
+                                    <menuItem state="on" id="zpb-tC-lek"/>
+                                    <menuItem title="Item 2" id="tg6-IE-R1e"/>
+                                    <menuItem title="Item 3" id="g6y-er-oUf"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>
                         <connections>
-                            <binding destination="P5N-Ot-6Le" name="content" keyPath="arrangedObjects" id="kLN-Sf-ZdJ"/>
+                            <binding destination="eXp-OD-qmX" name="content" keyPath="arrangedObjects" id="8H3-3U-YTM"/>
                         </connections>
                     </popUpButton>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAh-9J-YPR">
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Itw-By-SCY">
                         <rect key="frame" x="132" y="18" width="100" height="18"/>
-                        <buttonCell key="cell" type="check" title="Rounding" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="R8N-FY-dyI">
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Rounding" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="WpZ-jC-Kxv">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sn0-tg-G2J">
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4df-jk-TZR">
                         <rect key="frame" x="134" y="47" width="96" height="22"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="gVT-UM-rXD">
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="D0q-0H-gEt">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="-2" name="value" keyPath="requestInterval" id="9zI-C8-Rxu">
+                            <binding destination="-2" name="value" keyPath="requestInterval" id="xnn-IR-lYj">
                                 <dictionary key="options">
                                     <bool key="NSContinuouslyUpdatesValue" value="YES"/>
                                 </dictionary>
                             </binding>
-                            <outlet property="formatter" destination="kZb-bV-UV5" id="l9Z-RG-puN"/>
+                            <outlet property="formatter" destination="mdG-rp-JMV" id="R0J-Sp-ALf"/>
                         </connections>
                     </textField>
-                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5s-dq-cfE">
+                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGI-Pg-1T1">
                         <rect key="frame" x="235" y="44" width="19" height="27"/>
-                        <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="bk1-11-0Wt"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="bWL-5s-c4t"/>
                         <connections>
-                            <binding destination="-2" name="value" keyPath="requestInterval" id="Mna-e4-SyQ"/>
+                            <binding destination="-2" name="value" keyPath="requestInterval" id="0Bh-Ld-c8T"/>
                         </connections>
                     </stepper>
                 </subviews>
             </view>
             <connections>
-                <outlet property="delegate" destination="-2" id="gyn-Nj-ae1"/>
+                <outlet property="delegate" destination="-2" id="R8H-rq-kCK"/>
             </connections>
             <point key="canvasLocation" x="532.5" y="427.5"/>
         </window>
-        <arrayController id="P5N-Ot-6Le" userLabel="Projects Array Controller">
+        <arrayController id="eXp-OD-qmX">
             <connections>
-                <binding destination="-2" name="contentArray" keyPath="projects" id="ZBd-cp-Qk2"/>
+                <binding destination="-2" name="contentArray" keyPath="projects" id="DPX-hJ-SaL"/>
             </connections>
         </arrayController>
-        <customObject id="kZb-bV-UV5" customClass="OnlyIntegerValueFormatter" customModule="togglord" customModuleProvider="target"/>
+        <customObject id="mdG-rp-JMV" customClass="OnlyIntegerValueFormatter" customModule="togglord" customModuleProvider="target"/>
     </objects>
 </document>

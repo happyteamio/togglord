@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54074A35203352EA00234404 /* SettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54074A34203352EA00234404 /* SettingsWindowController.xib */; };
+		54D56E1320332D62006BB566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D56E1220332D62006BB566 /* AppDelegate.swift */; };
+		54D56E1520332D62006BB566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D56E1420332D62006BB566 /* Assets.xcassets */; };
+		54D56E1820332D62006BB566 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D56E1620332D62006BB566 /* MainMenu.xib */; };
+		54D56E2420334C40006BB566 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D56E2020334C40006BB566 /* RxSwift.framework */; };
+		54D56E2520334C40006BB566 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54D56E2020334C40006BB566 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54D56E2620334C40006BB566 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D56E2120334C40006BB566 /* Alamofire.framework */; };
+		54D56E2720334C40006BB566 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54D56E2120334C40006BB566 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54D56E2820334C40006BB566 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D56E2220334C40006BB566 /* RxCocoa.framework */; };
+		54D56E2920334C40006BB566 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54D56E2220334C40006BB566 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54D56E2A20334C40006BB566 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D56E2320334C40006BB566 /* SwiftyJSON.framework */; };
+		54D56E2B20334C40006BB566 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54D56E2320334C40006BB566 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54D56E2E20334C7B006BB566 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D56E2D20334C7B006BB566 /* SettingsManager.swift */; };
+		54D56E3220334CCD006BB566 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D56E3120334CCD006BB566 /* UserSettings.swift */; };
+		54D56E3420334D10006BB566 /* KeyboardEnabledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D56E3320334D10006BB566 /* KeyboardEnabledTextField.swift */; };
+		54D56E3620334D2D006BB566 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D56E3520334D2D006BB566 /* Extensions.swift */; };
+		54D56E3820334D53006BB566 /* TogglAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D56E3720334D53006BB566 /* TogglAPI.swift */; };
+		54D56E3A20334D8E006BB566 /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D56E3920334D8E006BB566 /* SettingsWindowController.swift */; };
+		54D56E3C20334DAA006BB566 /* OnlyIntegerValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D56E3B20334DAA006BB566 /* OnlyIntegerValueFormatter.swift */; };
+		54D56E3E20334E07006BB566 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D56E3D20334E07006BB566 /* StatusMenuController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		54D56E2C20334C40006BB566 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				54D56E2B20334C40006BB566 /* SwiftyJSON.framework in Embed Frameworks */,
+				54D56E2920334C40006BB566 /* RxCocoa.framework in Embed Frameworks */,
+				54D56E2520334C40006BB566 /* RxSwift.framework in Embed Frameworks */,
+				54D56E2720334C40006BB566 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		54074A34203352EA00234404 /* SettingsWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsWindowController.xib; sourceTree = "<group>"; };
+		54D56E0F20332D62006BB566 /* togglord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = togglord.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54D56E1220332D62006BB566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		54D56E1420332D62006BB566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		54D56E1720332D62006BB566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		54D56E1920332D62006BB566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54D56E1A20332D62006BB566 /* togglord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = togglord.entitlements; sourceTree = "<group>"; };
+		54D56E2020334C40006BB566 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		54D56E2120334C40006BB566 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		54D56E2220334C40006BB566 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
+		54D56E2320334C40006BB566 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/Mac/SwiftyJSON.framework; sourceTree = "<group>"; };
+		54D56E2D20334C7B006BB566 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		54D56E3120334CCD006BB566 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		54D56E3320334D10006BB566 /* KeyboardEnabledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardEnabledTextField.swift; sourceTree = "<group>"; };
+		54D56E3520334D2D006BB566 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		54D56E3720334D53006BB566 /* TogglAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglAPI.swift; sourceTree = "<group>"; };
+		54D56E3920334D8E006BB566 /* SettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
+		54D56E3B20334DAA006BB566 /* OnlyIntegerValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyIntegerValueFormatter.swift; sourceTree = "<group>"; };
+		54D56E3D20334E07006BB566 /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		54D56E0C20332D62006BB566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54D56E2A20334C40006BB566 /* SwiftyJSON.framework in Frameworks */,
+				54D56E2820334C40006BB566 /* RxCocoa.framework in Frameworks */,
+				54D56E2420334C40006BB566 /* RxSwift.framework in Frameworks */,
+				54D56E2620334C40006BB566 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54D56E0620332D62006BB566 = {
+			isa = PBXGroup;
+			children = (
+				54D56E2120334C40006BB566 /* Alamofire.framework */,
+				54D56E2220334C40006BB566 /* RxCocoa.framework */,
+				54D56E2020334C40006BB566 /* RxSwift.framework */,
+				54D56E2320334C40006BB566 /* SwiftyJSON.framework */,
+				54D56E1120332D62006BB566 /* togglord */,
+				54D56E1020332D62006BB566 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		54D56E1020332D62006BB566 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54D56E0F20332D62006BB566 /* togglord.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54D56E1120332D62006BB566 /* togglord */ = {
+			isa = PBXGroup;
+			children = (
+				54D56E1220332D62006BB566 /* AppDelegate.swift */,
+				54D56E1420332D62006BB566 /* Assets.xcassets */,
+				54D56E1620332D62006BB566 /* MainMenu.xib */,
+				54D56E1920332D62006BB566 /* Info.plist */,
+				54D56E1A20332D62006BB566 /* togglord.entitlements */,
+				54D56E3520334D2D006BB566 /* Extensions.swift */,
+				54D56E3320334D10006BB566 /* KeyboardEnabledTextField.swift */,
+				54D56E3B20334DAA006BB566 /* OnlyIntegerValueFormatter.swift */,
+				54D56E2D20334C7B006BB566 /* SettingsManager.swift */,
+				54D56E3920334D8E006BB566 /* SettingsWindowController.swift */,
+				54074A34203352EA00234404 /* SettingsWindowController.xib */,
+				54D56E3D20334E07006BB566 /* StatusMenuController.swift */,
+				54D56E3720334D53006BB566 /* TogglAPI.swift */,
+				54D56E3120334CCD006BB566 /* UserSettings.swift */,
+			);
+			path = togglord;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		54D56E0E20332D62006BB566 /* togglord */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54D56E1D20332D62006BB566 /* Build configuration list for PBXNativeTarget "togglord" */;
+			buildPhases = (
+				54D56E0B20332D62006BB566 /* Sources */,
+				54D56E0C20332D62006BB566 /* Frameworks */,
+				54D56E0D20332D62006BB566 /* Resources */,
+				54D56E2C20334C40006BB566 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = togglord;
+			productName = togglord;
+			productReference = 54D56E0F20332D62006BB566 /* togglord.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54D56E0720332D62006BB566 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = happyteam.io;
+				TargetAttributes = {
+					54D56E0E20332D62006BB566 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 54D56E0A20332D62006BB566 /* Build configuration list for PBXProject "togglord" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 54D56E0620332D62006BB566;
+			productRefGroup = 54D56E1020332D62006BB566 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54D56E0E20332D62006BB566 /* togglord */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		54D56E0D20332D62006BB566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54D56E1520332D62006BB566 /* Assets.xcassets in Resources */,
+				54074A35203352EA00234404 /* SettingsWindowController.xib in Resources */,
+				54D56E1820332D62006BB566 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		54D56E0B20332D62006BB566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54D56E3620334D2D006BB566 /* Extensions.swift in Sources */,
+				54D56E3A20334D8E006BB566 /* SettingsWindowController.swift in Sources */,
+				54D56E2E20334C7B006BB566 /* SettingsManager.swift in Sources */,
+				54D56E3C20334DAA006BB566 /* OnlyIntegerValueFormatter.swift in Sources */,
+				54D56E3820334D53006BB566 /* TogglAPI.swift in Sources */,
+				54D56E3220334CCD006BB566 /* UserSettings.swift in Sources */,
+				54D56E3E20334E07006BB566 /* StatusMenuController.swift in Sources */,
+				54D56E3420334D10006BB566 /* KeyboardEnabledTextField.swift in Sources */,
+				54D56E1320332D62006BB566 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		54D56E1620332D62006BB566 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54D56E1720332D62006BB566 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		54D56E1B20332D62006BB566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		54D56E1C20332D62006BB566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		54D56E1E20332D62006BB566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = togglord/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.happyteam.togglord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		54D56E1F20332D62006BB566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = togglord/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.happyteam.togglord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		54D56E0A20332D62006BB566 /* Build configuration list for PBXProject "togglord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54D56E1B20332D62006BB566 /* Debug */,
+				54D56E1C20332D62006BB566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54D56E1D20332D62006BB566 /* Build configuration list for PBXNativeTarget "togglord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54D56E1E20332D62006BB566 /* Debug */,
+				54D56E1F20332D62006BB566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 54D56E0720332D62006BB566 /* Project object */;
+}

@@ -2,20 +2,26 @@
 //  AppDelegate.swift
 //  togglord
 //
-//  Created by Maciej Woźniak on 17.04.2016.
-//  Copyright © 2016 Happy Team. All rights reserved.
+//  Created by Maciej Woźniak on 13.02.2018.
+//  Copyright © 2018 happyteam.io. All rights reserved.
 //
 
 import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+
+    @IBOutlet weak var window: NSWindow!
+
+
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        // Insert code here to initialize your application
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+
+
 }
 

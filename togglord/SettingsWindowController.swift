@@ -2,8 +2,8 @@
 //  SettingsWindowController.swift
 //  togglord
 //
-//  Created by Maciej Woźniak on 17.04.2016.
-//  Copyright © 2016 Happy Team. All rights reserved.
+//  Created by Maciej Woźniak on 13.02.2018.
+//  Copyright © 2018 happyteam.io. All rights reserved.
 //
 
 import Foundation
@@ -55,7 +55,7 @@ class SettingsWindowController : NSWindowController, NSWindowDelegate {
                 projects = user.projects.map { ProjectViewModel(project: $0) }
                 
                 if savedProjectId != nil {
-                    updateProject(savedProjectId!)
+                    updateProject(projectId: savedProjectId!)
                     savedProjectId = nil
                 }
             } else {
@@ -64,41 +64,42 @@ class SettingsWindowController : NSWindowController, NSWindowDelegate {
         }
     }
     
-    override var windowNibName: String? {
-        return "SettingsWindowController"
+    override var windowNibName: NSNib.Name? {
+        return NSNib.Name.init("SettingsWindowController")
     }
     
-    dynamic var requestInterval: Int = 300
     
-    dynamic var projects: [ProjectViewModel] = []
+    @objc dynamic var requestInterval: Int = 300
+    
+    @objc dynamic var projects: [ProjectViewModel] = []
     
     func unbindSettings() -> UserSettings? {
         guard let selectedProject = projectsList.selectedItem?.representedObject as? ProjectViewModel,
-            currentUser = currentUser else { return nil }
+            let currentUser = currentUser else { return nil }
         
         return UserSettings(apiToken: currentUser.apiToken,
-            rounding: rounding.state == NSOnState,
-            projectId: selectedProject.id,
-            workspaceId: selectedProject.workspaceId,
-            userId: currentUser.id,
-            requestIntervalSeconds: requestInterval < SettingsWindowController.MinimumRequestInterval
-                ? SettingsWindowController.MinimumRequestInterval
-                : requestInterval)
+                            rounding: rounding.state == .on,
+                            projectId: selectedProject.id,
+                            workspaceId: selectedProject.workspaceId,
+                            userId: currentUser.id,
+                            requestIntervalSeconds: requestInterval < SettingsWindowController.MinimumRequestInterval
+                                ? SettingsWindowController.MinimumRequestInterval
+                                : requestInterval)
     }
-
-    func updateUser(user: UserInfo?) {
-        currentUser = user
+    
+    func updateUser(user: Event<UserInfo?>) {
+        currentUser = user.element!
     }
     
     func updateProject(projectId: Int) {
-        if let projectIndex = projects.indexOf({ $0.id == projectId}) {
-            projectsList.selectItemAtIndex(projectIndex)
+        if let projectIndex = projects.index(where: { $0.id == projectId}) {
+            projectsList.selectItem(at: projectIndex)
         }
     }
     
     func bindSettings(settings: UserSettings) {
         apiToken.stringValue = settings.apiToken
-        rounding.state = settings.rounding ? NSOnState : NSOffState
+        rounding.state = settings.rounding ? .on : .off
         savedProjectId = settings.projectId
         requestInterval = settings.requestIntervalSeconds
     }
@@ -110,31 +111,35 @@ class SettingsWindowController : NSWindowController, NSWindowDelegate {
         self.window?.center()
         self.window?.makeKeyAndOrderFront(nil)
         
-        formatter.minimum = SettingsWindowController.MinimumRequestInterval
+        let min = SettingsWindowController.MinimumRequestInterval as NSNumber
+        formatter.minimum = min
         requestStepper.minValue = Double(SettingsWindowController.MinimumRequestInterval)
         
         if let settings = settingsManager.settings {
-            bindSettings(settings)
+            bindSettings(settings: settings)
         }
-
-        apiToken.rx_text
+        
+        apiToken.rx
+            .text
             .throttle(0.5, scheduler: MainScheduler.instance)
-            .distinctUntilChanged()
-            .flatMapLatest(self.togglApi.getUserInfo)
-            .subscribeNext { self.updateUser($0) }
-            .addDisposableTo(disposeBag)
+            .distinctUntilChanged({ $0 == $1 })
+            .flatMapLatest { s in self.togglApi.getUserInfo(apiToken: s!) }
+            .subscribe({ n in self.updateUser(user: n) })
+            .disposed(by: disposeBag)
     }
     
-    func windowWillClose(notification: NSNotification) {
+    func windowWillClose(_ notification: Notification) {
         debugPrint("SettingsWindow closing")
         disposeBag = nil
         if let delegate = self.delegate {
             if let settings = unbindSettings() {
                 settingsManager.settings = settings
-                delegate.settingsUpdated(settings)
+                delegate.settingsUpdated(settings: settings)
             }
             
             delegate.settingsWindowWillClose()
         }
     }
 }
+
+

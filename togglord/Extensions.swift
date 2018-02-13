@@ -2,23 +2,23 @@
 //  Extensions.swift
 //  togglord
 //
-//  Created by Maciej Woźniak on 24.04.2016.
-//  Copyright © 2016 Happy Team. All rights reserved.
+//  Created by Maciej Woźniak on 13.02.2018.
+//  Copyright © 2018 happyteam.io. All rights reserved.
 //
 
 import Foundation
 
 extension String {
     func toBase64() -> String {
-        let data = self.dataUsingEncoding(NSUTF8StringEncoding)
-        return data!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+        let data = self.data(using: String.Encoding.utf8)
+        return data!.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
     }
 }
 
-extension NSCalendar {
-    func firstDateOfTheWeek(week: NSDate) -> NSDate {
-        let currentDateComponents = components([.YearForWeekOfYear, .WeekOfYear ], fromDate: week)
-        let startOfWeek = dateFromComponents(currentDateComponents)
+extension Calendar {
+    func firstDateOfTheWeek(week: Date) -> Date {
+        let currentDateComponents = dateComponents([.yearForWeekOfYear, .weekOfYear ], from: week)
+        let startOfWeek = date(from: currentDateComponents)
         return startOfWeek!
     }
 }

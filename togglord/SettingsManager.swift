@@ -2,28 +2,28 @@
 //  SettingsManager.swift
 //  togglord
 //
-//  Created by Maciej Woźniak on 21.05.2016.
-//  Copyright © 2016 Happy Team. All rights reserved.
+//  Created by Maciej Woźniak on 13.02.2018.
+//  Copyright © 2018 happyteam.io. All rights reserved.
 //
 
 import Foundation
 
 class SettingsManager {
-    private let userDefaults = NSUserDefaults.standardUserDefaults()
+    private let userDefaults = UserDefaults.standard
     
     static let defaultManager:SettingsManager = SettingsManager()
     
     var settings: UserSettings? {
         get {
-            guard let dict = userDefaults.objectForKey("settings") as? NSDictionary else {
+            guard let dict = userDefaults.object(forKey: "settings") as? NSDictionary else {
                 return nil
             }
             
             guard let apiToken = dict["apiToken"] as? String,
-                rounding = dict["rounding"] as? Bool,
-                projectId = dict["projectId"] as? Int,
-                workspaceId = dict["workspaceId"] as? Int,
-                userId = dict["userId"] as? Int
+                let rounding = dict["rounding"] as? Bool,
+                let projectId = dict["projectId"] as? Int,
+                let workspaceId = dict["workspaceId"] as? Int,
+                let userId = dict["userId"] as? Int
                 else {
                     return nil
             }
@@ -43,10 +43,10 @@ class SettingsManager {
                     "workspaceId": newSettings.workspaceId,
                     "userId": newSettings.userId,
                     "requestIntervalSeconds": newSettings.requestIntervalSeconds
-                ]
-                userDefaults.setObject(dict, forKey: "settings")
+                    ] as [String : Any]
+                userDefaults.set(dict, forKey: "settings")
             } else {
-                userDefaults.removeObjectForKey("settings")
+                userDefaults.removeObject(forKey: "settings")
             }
         }
     }

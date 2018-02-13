@@ -2,11 +2,9 @@
 //  UserSettings.swift
 //  togglord
 //
-//  Created by Maciej Woźniak on 21.05.2016.
-//  Copyright © 2016 Happy Team. All rights reserved.
+//  Created by Maciej Woźniak on 13.02.2018.
+//  Copyright © 2018 happyteam.io. All rights reserved.
 //
-
-import Foundation
 
 struct UserSettings {
     let apiToken: String

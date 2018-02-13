@@ -2,26 +2,27 @@
 //  StatusMenuController.swift
 //  togglord
 //
-//  Created by Maciej Woźniak on 21.05.2016.
-//  Copyright © 2016 Happy Team. All rights reserved.
+//  Created by Maciej Woźniak on 13.02.2018.
+//  Copyright © 2018 happyteam.io. All rights reserved.
 //
 
+import Foundation
 import Cocoa
 import RxSwift
 import RxCocoa
 
 private extension Int {
     func toStringInterval(skipSeconds: Bool) -> String? {
-        let formatter = NSDateComponentsFormatter()
-        formatter.allowedUnits = skipSeconds ? [.Hour, .Minute ] : [.Hour, .Minute, .Second]
-        formatter.zeroFormattingBehavior = .None
-        return formatter.stringFromTimeInterval(Double(self / 1000))
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = skipSeconds ? [.hour, .minute ] : [.hour, .minute, .second]
+        formatter.zeroFormattingBehavior = .default
+        return formatter.string(from: Double(self / 1000))
     }
 }
 
 class StatusMenuController: NSObject, SettingsWindowDelegate {
     let settingsManager = SettingsManager.defaultManager
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     private let togglApi = TogglAPI()
     private var settings: UserSettings?
@@ -32,9 +33,9 @@ class StatusMenuController: NSObject, SettingsWindowDelegate {
     private var currentSettingsWindow: SettingsWindowController?
     
     override func awakeFromNib() {
-        setSummary(nil)
+        setSummary(summaryEvent: Event<WeeklySummary?>.next(nil))
         statusItem.menu = statusMenu
-
+        
         settings = settingsManager.settings
         restartTimer()
     }
@@ -50,7 +51,7 @@ class StatusMenuController: NSObject, SettingsWindowDelegate {
         let interval = RxTimeInterval(settings.requestIntervalSeconds)
         timer = Observable<Int>.timer(0, period: interval, scheduler: MainScheduler.instance).map { _ in () }
             .flatMapLatest(getRequest)
-            .subscribeNext(setSummary)
+            .subscribe(setSummary)
     }
     
     func settingsUpdated(settings: UserSettings) {
@@ -74,17 +75,19 @@ class StatusMenuController: NSObject, SettingsWindowDelegate {
         return req
     }
     
-    func setSummary(summary: WeeklySummary?) {
-        let selectedProject = summary?.projects.filter({ $0.id == settings?.projectId }).first
-        setTime(selectedProject?.total)
+    func setSummary(summaryEvent: Event<WeeklySummary?>) {
+        if let summary = summaryEvent.element {
+            let selectedProject = summary?.projects.filter({ $0.id == settings?.projectId }).first
+            setTime(total: selectedProject?.total)
+        }
     }
     
     func setTime(total: Int?) {
         if total == nil {
             statusItem.title = "??:??:??"
         } else {
-            debugPrint(total)
-            statusItem.title = total!.toStringInterval(settings?.rounding ?? false)
+            debugPrint(total ?? "")
+            statusItem.title = total!.toStringInterval(skipSeconds: settings?.rounding ?? false)
         }
     }
     
@@ -96,10 +99,11 @@ class StatusMenuController: NSObject, SettingsWindowDelegate {
             currentSettingsWindow = settingsWindow
         }
         currentSettingsWindow?.showWindow(nil)
-        NSApp.activateIgnoringOtherApps(true)
+        NSApp.activate(ignoringOtherApps: true)
     }
     
     @IBAction func quitItemClicked(sender: NSMenuItem) {
-        NSApplication.sharedApplication().terminate(self)
+        NSApplication.shared.terminate(self)
     }
 }
+

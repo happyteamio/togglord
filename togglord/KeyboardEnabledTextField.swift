@@ -2,8 +2,8 @@
 //  KeyboardEnabledTextField.swift
 //  togglord
 //
-//  Created by Maciej Woźniak on 21.05.2016.
-//  Copyright © 2016 Happy Team. All rights reserved.
+//  Created by Maciej Woźniak on 13.02.2018.
+//  Copyright © 2018 happyteam.io. All rights reserved.
 //
 
 import Foundation
@@ -18,13 +18,13 @@ import Cocoa
 }
 
 class KeyboardEnabledTextField : NSTextField {
-    private let commandKey = NSEventModifierFlags.CommandKeyMask.rawValue
+    private let commandKey = NSEvent.ModifierFlags.command.rawValue
     
-    private let commandShiftKey = NSEventModifierFlags.CommandKeyMask.rawValue | NSEventModifierFlags.ShiftKeyMask.rawValue
+    private let commandShiftKey = NSEvent.ModifierFlags.command.rawValue | NSEvent.ModifierFlags.shift.rawValue
     
-    override func performKeyEquivalent(event: NSEvent) -> Bool {
-        if event.type == NSEventType.KeyDown {
-            if (event.modifierFlags.rawValue & NSEventModifierFlags.DeviceIndependentModifierFlagsMask.rawValue) == commandKey {
+    override func performKeyEquivalent(with event: NSEvent) -> Bool {
+        if event.type == NSEvent.EventType.keyDown {
+            if (event.modifierFlags.rawValue & NSEvent.ModifierFlags.deviceIndependentFlagsMask.rawValue) == commandKey {
                 switch event.charactersIgnoringModifiers! {
                 case "x":
                     if NSApp.sendAction(#selector(NSText.cut(_:)), to:nil, from:self) { return true }
@@ -33,19 +33,19 @@ class KeyboardEnabledTextField : NSTextField {
                 case "v":
                     if NSApp.sendAction(#selector(NSText.paste(_:)), to:nil, from:self) { return true }
                 case "z":
-                    if NSApp.sendAction(#selector(UndoActionRespondable.undo(_:)), to:nil, from:self) { return true }
+                    if NSApp.sendAction(#selector(UndoActionRespondable.undo(sender:)), to:nil, from:self) { return true }
                 case "a":
                     if NSApp.sendAction(#selector(NSResponder.selectAll(_:)), to:nil, from:self) { return true }
                 default:
                     break
                 }
             }
-            else if (event.modifierFlags.rawValue & NSEventModifierFlags.DeviceIndependentModifierFlagsMask.rawValue) == commandShiftKey {
+            else if (event.modifierFlags.rawValue & NSEvent.ModifierFlags.deviceIndependentFlagsMask.rawValue) == commandShiftKey {
                 if event.charactersIgnoringModifiers == "Z" {
-                    if NSApp.sendAction(#selector(RedoActionRespondable.redo(_:)), to:nil, from:self) { return true }
+                    if NSApp.sendAction(#selector(RedoActionRespondable.redo(sender:)), to:nil, from:self) { return true }
                 }
             }
         }
-        return super.performKeyEquivalent(event)
+        return super.performKeyEquivalent(with: event)
     }
 }
